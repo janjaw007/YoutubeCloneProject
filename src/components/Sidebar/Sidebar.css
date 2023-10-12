@@ -1,12 +1,14 @@
 .sidebar-container {
   height: calc(100vh - 65px);
-  width: 10%;
+  width: 88px;
   max-width: 87.797px;
   background-color: #1f2024;
-  margin-top: 65px;
+  /* margin-top: 65px; */
   color: #fff;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 65px;
 }
 
 .sidebar-container div {
@@ -20,5 +22,7 @@
 
 .sidebar-container div p {
   margin-top: 0.5rem;
-  font-size: 0.125rem;
+  font-size: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
