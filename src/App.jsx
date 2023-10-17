@@ -1,14 +1,13 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Sidebar from "./components/Sidebar/Sidebar";
+import SidebarToggle from "./components/SidebarToggle/SidebarToggle";
 import Filterbar from "./components/Filterbar/Filterbar";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Sidebar />
-      <Filterbar />
+      <SidebarToggle />
     </>
   );
 }

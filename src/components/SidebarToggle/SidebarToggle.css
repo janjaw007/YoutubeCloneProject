@@ -1,0 +1,73 @@
+:root {
+  --primaryColor: #0f0f0f;
+  --secondaryColor: #222222;
+  --whiteColor: #fff;
+  --fontSize: 1rem;
+  --hoverNavColor: #272727;
+  --borderColor: #303030;
+  --fullScreenHoverColor: #3d3d3d;
+  --overlayColor: rgba(7, 7, 7, 0.5);
+  --sideBorderColor: #3f3f3f;
+}
+
+.SidebarToggle-section {
+  background-color: var(--overlayColor);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.sidebartoggle-contaitner {
+  width: 45%;
+  height: 100%;
+  background-color: var(--primaryColor);
+}
+
+.sidebar-nav {
+  width: 100%;
+  height: 55px;
+  margin-left: 13px;
+}
+
+.left-nav {
+  width: 100%;
+}
+
+.sidebar-box {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 12px;
+  /* height: 20%; */
+  /* background-color: red; */
+  border-bottom: 1.5px solid var(--sideBorderColor);
+}
+
+.side-list {
+  font-size: var(--fontSize);
+  color: var(--whiteColor);
+  list-style-type: none;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.side-list:hover {
+  background-color: var(--hoverNavColor);
+  cursor: pointer;
+}
+
+.side-list span {
+  margin-left: 20px;
+}
+
+.icon {
+  font-size: 1.25rem;
+}
