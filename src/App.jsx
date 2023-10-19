@@ -4,10 +4,14 @@ import SidebarToggle from "./components/SidebarToggle/SidebarToggle";
 import Filterbar from "./components/Filterbar/Filterbar";
 
 function App() {
+  const [showSidebar, setShowSidebar] = useState("");
   return (
     <>
-      <Navbar />
-      <SidebarToggle />
+      <Navbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+      <SidebarToggle
+        showSidebar={showSidebar}
+        setShowSidebar={setShowSidebar}
+      />
     </>
   );
 }

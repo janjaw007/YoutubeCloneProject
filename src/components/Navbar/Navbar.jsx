@@ -10,12 +10,24 @@ import { AiOutlineVideoCameraAdd } from "react-icons/ai";
 
 import youtubeLogo from "../../assets/youtubelogo.svg";
 
-function Navbar() {
+function Navbar({ showSidebar, setShowSidebar }) {
+  function onhandleShowSidebar() {
+    if (showSidebar === "") {
+      setShowSidebar("show-sidebar");
+    } else {
+      setShowSidebar("");
+    }
+    console.log(showSidebar);
+  }
+
   return (
     <div className="section-navbar">
       <div className="content-containter nav-containter">
         <NavBox className={"left-nav"}>
-          <GiHamburgerMenu className="ham-menu nav-items" />
+          <GiHamburgerMenu
+            onClick={onhandleShowSidebar}
+            className="ham-menu nav-items"
+          />
           <img src={youtubeLogo} alt="" />
         </NavBox>
         <NavBox className={"center-nav"}>
