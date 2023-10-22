@@ -10,15 +10,8 @@ import { AiOutlineVideoCameraAdd } from "react-icons/ai";
 
 import youtubeLogo from "../../assets/youtubelogo.svg";
 
-function Navbar({ showSidebar, setShowSidebar }) {
-  function onhandleShowSidebar() {
-    if (showSidebar === "") {
-      setShowSidebar("show-sidebar");
-    } else {
-      setShowSidebar("");
-    }
-    console.log(showSidebar);
-  }
+function Navbar(props) {
+  const { isShowSidebar, setIsShowSidebar, onhandleShowSidebar } = props;
 
   return (
     <div className="section-navbar">

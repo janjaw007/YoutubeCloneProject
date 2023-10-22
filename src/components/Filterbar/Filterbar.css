@@ -1,12 +1,16 @@
+@import "../../index.css";
+
 .Filterbar-containter {
-  background-color: #1f2024;
-  margin-left: 88px;
-  margin-top: calc(-100vh + 65px);
+  background-color: var(--primaryColor);
+
+  /* margin-top: calc(-100vh + 65px); */
   height: 50px;
   display: flex;
   padding-left: 1.5rem;
   padding-bottom: 0.75rem;
   align-items: center;
+  position: fixed;
+  top: 55px;
 }
 
 .Filterbar-containter li {

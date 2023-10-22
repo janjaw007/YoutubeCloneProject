@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --primaryColor: #0f0f0f;
   --secondaryColor: #222222;
@@ -12,4 +6,12 @@
   --hoverNavColor: #272727;
   --borderColor: #303030;
   --fullScreenHoverColor: #3d3d3d;
+  --overlayColor: rgba(7, 7, 7, 0.5);
+  --sideBorderColor: #3f3f3f;
+}
+
+.overlay-sidebar {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--overlayColor);
 }

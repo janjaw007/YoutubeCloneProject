@@ -134,95 +134,88 @@ const discoveryLists = [
   },
 ];
 
-function SidebarToggle({ showSidebar, setShowSidebar }) {
-  function onhandleShowSidebar() {
-    if (showSidebar === "") {
-      setShowSidebar("show-sidebar");
-    } else {
-      setShowSidebar("");
-    }
-  }
+function SidebarToggle(props) {
+  const { isShowSidebar, onhandleShowSidebar } = props;
+
   return (
     <div
-      className={`SidebarToggle-section ${
-        showSidebar === "" ? "closeOverlay" : ""
+      className={`sidebartoggle-contaitner ${
+        isShowSidebar ? "show-sidebar" : ""
       }`}
     >
-      <div className={`sidebartoggle-contaitner ${showSidebar}`}>
-        <div className="sidebar-nav">
-          <NavBox className={"left-nav"}>
-            <GiHamburgerMenu
-              onClick={onhandleShowSidebar}
-              className="ham-menu nav-items"
-            />
-            <img src={youtubeLogo} alt="" />
-          </NavBox>
-        </div>
-        <SidebarBox>
-          {menuLists.map((menuList) => {
-            return (
-              <li key={menuList.text} className="side-list">
-                <span className="content">
-                  {menuList.icon}
-                  <span>{menuList.text}</span>
-                </span>
-                <span className="stream">
-                  {menuLists?.streamStatus && <CiStreamOn className="icon" />}
-                </span>
-              </li>
-            );
-          })}
-        </SidebarBox>
-        <SidebarBox>
-          {secondLists.map((menuList) => {
-            return (
-              <li key={menuList.text} className="side-list">
-                <span className="content">
-                  {menuList.icon}
-                  <span>{menuList.text}</span>
-                </span>
-                <span className="stream">
-                  {menuLists?.streamStatus && <CiStreamOn className="icon" />}
-                </span>
-              </li>
-            );
-          })}
-        </SidebarBox>
-        <SidebarBox>
-          <div className="headerSidebar">การติดตาม</div>
-          {followerLists.map((channel) => {
-            return (
-              <>
-                <li key={channel.channelName} className="side-list">
-                  <span className="content">
-                    {channel.channelImg}
-                    <span> {channel.channelName}</span>
-                  </span>
-                  <span className="stream">
-                    {channel.streamStatus && <CiStreamOn className="icon" />}
-                  </span>
-                </li>
-              </>
-            );
-          })}
-        </SidebarBox>
-        <SidebarBox>
-          <div className="headerSidebar">สำรวจ</div>
-          {discoveryLists.map((menuList) => {
-            return (
-              <li key={menuList.text} className="side-list">
-                <span className="content">
-                  {menuList.icon}
-                  <span>{menuList.text}</span>
-                </span>
-                <span className="stream">
-                  {menuLists?.streamStatus && <CiStreamOn className="icon" />}
-                </span>
-              </li>
-            );
-          })}
-        </SidebarBox>
+      <div className="sidebar-nav">
+        <NavBox className={"left-nav"}>
+          <GiHamburgerMenu
+            onClick={onhandleShowSidebar}
+            className="ham-menu nav-items"
+          />
+          <img src={youtubeLogo} alt="" />
+        </NavBox>
       </div>
+      <SidebarBox>
+        {menuLists.map((menuList) => {
+          return (
+            <li key={menuList.text} className="side-list">
+              <span className="content">
+                {menuList.icon}
+                <span>{menuList.text}</span>
+              </span>
+              <span className="stream">
+                {menuLists?.streamStatus && <CiStreamOn className="icon" />}
+              </span>
+            </li>
+          );
+        })}
+      </SidebarBox>
+      <SidebarBox>
+        {secondLists.map((menuList) => {
+          return (
+            <li key={menuList.text} className="side-list">
+              <span className="content">
+                {menuList.icon}
+                <span>{menuList.text}</span>
+              </span>
+              <span className="stream">
+                {menuLists?.streamStatus && <CiStreamOn className="icon" />}
+              </span>
+            </li>
+          );
+        })}
+      </SidebarBox>
+      <SidebarBox>
+        <div className="headerSidebar">การติดตาม</div>
+        {followerLists.map((channel) => {
+          return (
+            <>
+              <li key={channel.channelName} className="side-list">
+                <span className="content">
+                  {channel.channelImg}
+                  <span> {channel.channelName}</span>
+                </span>
+                <span className="stream">
+                  {channel.streamStatus && <CiStreamOn className="icon" />}
+                </span>
+              </li>
+            </>
+          );
+        })}
+      </SidebarBox>
+      <SidebarBox>
+        <div className="headerSidebar">สำรวจ</div>
+        {discoveryLists.map((menuList) => {
+          return (
+            <li key={menuList.text} className="side-list">
+              <span className="content">
+                {menuList.icon}
+                <span>{menuList.text}</span>
+              </span>
+              <span className="stream">
+                {menuLists?.streamStatus && <CiStreamOn className="icon" />}
+              </span>
+            </li>
+          );
+        })}
+      </SidebarBox>
     </div>
   );
 }
