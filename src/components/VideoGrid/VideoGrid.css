@@ -6,18 +6,13 @@
   --hoverNavColor: #272727;
   --borderColor: #303030;
   --fullScreenHoverColor: #3d3d3d;
-  --overlayColor: rgba(7, 7, 7, 0.5);
-  --sideBorderColor: #3f3f3f;
 }
 
-.overlay-sidebar {
-  /* width: 100vw; */
+.video-containter {
   width: 100vw;
   height: 100vh;
-  background-color: var(--overlayColor);
-  position: fixed;
-
-  top: 0;
-  left: 0;
-  z-index: 20;
+  background-color: red;
+  position: relative;
+  top: 115px;
+  z-index: 10;
 }

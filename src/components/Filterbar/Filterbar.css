@@ -1,25 +1,40 @@
 @import "../../index.css";
 
+:root {
+  --primaryColor: #0f0f0f;
+  --secondaryColor: #222222;
+  --whiteColor: #fff;
+  --fontSize: 1rem;
+  --hoverNavColor: #272727;
+  --borderColor: #303030;
+  --fullScreenHoverColor: #3d3d3d;
+}
 .Filterbar-containter {
   background-color: var(--primaryColor);
 
   /* margin-top: calc(-100vh + 65px); */
-  height: 50px;
+  height: 60px;
   display: flex;
   padding-left: 1.5rem;
   padding-bottom: 0.75rem;
   align-items: center;
   position: fixed;
   top: 55px;
+  z-index: 20;
 }
 
 .Filterbar-containter li {
+  font-size: 14px;
+  margin-top: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-right: 1rem;
-
+  cursor: pointer;
   list-style: none;
   color: white;
-  background-color: #272727;
-  padding: 5px 10px;
+  background-color: var(--hoverNavColor);
+  padding: 8px 12.5px;
   border-radius: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
