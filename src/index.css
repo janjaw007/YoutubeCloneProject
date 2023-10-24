@@ -13,3 +13,7 @@
   --borderColor: #303030;
   --fullScreenHoverColor: #3d3d3d;
 }
+
+body {
+  background-color: var(--primaryColor);
+}

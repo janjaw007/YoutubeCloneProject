@@ -14,7 +14,7 @@
 
   /* margin-top: calc(-100vh + 65px); */
   height: 60px;
-  max-width: 506px;
+  width: 506px;
 
   display: flex;
   padding-left: 1.5rem;
@@ -28,6 +28,7 @@
 @media screen and (min-width: 657px) {
   .Filterbar-containter {
     left: 240px;
+    width: 100vw;
   }
 }
 
