@@ -1,5 +1,6 @@
 import React from "react";
 import "./Filterbar.css";
+import ScrollContainer from "react-indiana-drag-scroll";
 
 const filterLists = [
   { genre: "ทั้งหมด", isActive: false },
@@ -14,11 +15,11 @@ const filterLists = [
 
 function Filterbar() {
   return (
-    <div className="Filterbar-containter">
+    <ScrollContainer className="Filterbar-containter">
       {filterLists.map((list) => {
         return <Filter key={list.genre} list={list.genre} />;
       })}
-    </div>
+    </ScrollContainer>
   );
 }
 

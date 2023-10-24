@@ -17,7 +17,7 @@
 
 .content-containter {
   margin: auto;
-  width: 95vw;
+  max-width: 1875px;
   min-width: 356px;
 }
 
@@ -164,5 +164,8 @@
   }
   .mic:hover {
     background-color: var(--fullScreenHoverColor);
+  }
+  .right-nav {
+    margin-right: 20px;
   }
 }
