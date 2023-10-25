@@ -13,6 +13,7 @@
   width: 100%;
   position: fixed;
   z-index: 20;
+  padding-left: 10px;
 }
 
 .content-containter {
@@ -112,6 +113,9 @@
 }
 
 @media screen and (min-width: 657px) {
+  .section-navbar {
+    padding-left: 0px;
+  }
   .center-nav {
     /* background-color: blue; */
     justify-content: center;
