@@ -13,9 +13,14 @@ const filterLists = [
   { genre: "ฟุตบอล", isActive: false },
 ];
 
-function Filterbar() {
+function Filterbar(props) {
+  const { isShowSidebar, setIsShowSidebar, onhandleShowSidebar } = props;
   return (
-    <ScrollContainer className="Filterbar-containter">
+    <ScrollContainer
+      className={`Filterbar-containter ${
+        isShowSidebar ? "move-containter" : ""
+      }`}
+    >
       {filterLists.map((list) => {
         return <Filter key={list.genre} list={list.genre} />;
       })}

@@ -16,3 +16,19 @@
   top: 115px;
   z-index: 10;
 }
+
+@media screen and (min-width: 1170px) {
+  .video-containter {
+    left: 240px;
+    background-color: antiquewhite;
+    width: 100vw;
+  }
+  .move-containter {
+    left: 70px;
+    background-color: red;
+    z-index: 50;
+  }
+  .movetoback {
+    z-index: 40;
+  }
+}

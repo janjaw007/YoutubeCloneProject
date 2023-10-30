@@ -123,12 +123,12 @@
   margin-bottom: 5px;
 }
 
-@media screen and (min-width: 1309px) {
+@media screen and (min-width: 1170px) {
   .sidebartoggle-contaitner {
     left: 0;
+    z-index: 40;
   }
 
-  .show-sidebar .content span,
   .show-sidebar .content .stream {
     display: none;
   }
@@ -142,10 +142,21 @@
     border-bottom: none;
   }
   .show-sidebar .side-list {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 80px;
+    font-size: 12px;
+    margin-left: -3px;
   }
   .show-sidebar .side-list .content {
-    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .show-sidebar .content span {
+    margin: 0;
+    padding: 0;
   }
 }

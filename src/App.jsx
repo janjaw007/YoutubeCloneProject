@@ -32,8 +32,16 @@ function App() {
         setIsShowSidebar={setIsShowSidebar}
         onhandleShowSidebar={onhandleShowSidebar}
       />
-      <Filterbar />
-      <VideoGrid />
+      <Filterbar
+        isShowSidebar={isShowSidebar}
+        setIsShowSidebar={setIsShowSidebar}
+        onhandleShowSidebar={onhandleShowSidebar}
+      />
+      <VideoGrid
+        isShowSidebar={isShowSidebar}
+        setIsShowSidebar={setIsShowSidebar}
+        onhandleShowSidebar={onhandleShowSidebar}
+      />
     </>
   );
 }

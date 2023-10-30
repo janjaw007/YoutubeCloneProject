@@ -27,8 +27,18 @@
 
 @media screen and (min-width: 657px) {
   .Filterbar-containter {
-    left: 240px;
     width: 100vw;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .Filterbar-containter {
+    left: 240px;
+    background-color: antiquewhite;
+  }
+  .move-containter {
+    left: 70px;
+    background-color: red;
+    z-index: 50;
   }
 }
 
