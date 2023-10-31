@@ -1,5 +1,6 @@
 import React from "react";
 import "./VideoGrid.css";
+import VideoComponent from "./VideosComponent/VideoComponent";
 
 function VideoGrid(props) {
   const { isShowSidebar, setIsShowSidebar, onhandleShowSidebar } = props;
@@ -9,7 +10,20 @@ function VideoGrid(props) {
         isShowSidebar ? "move-containter movetoback" : ""
       }`}
     >
-      VideoGrid
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
+      <VideoComponent />
     </div>
   );
 }

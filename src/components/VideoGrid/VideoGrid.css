@@ -9,24 +9,39 @@
 }
 
 .video-containter {
-  width: 100vw;
+  margin: auto;
+  width: 95vw;
   height: 100vh;
-  background-color: var(--primaryColor);
+
   position: relative;
   top: 115px;
   z-index: 10;
+  display: grid;
+  place-items: center;
+
+  grid-template-columns: 1fr;
+  grid-gap: 10px 10px;
+}
+
+@media screen and (min-width: 845px) {
+  .video-containter {
+    grid-template-columns: 50% 50%;
+  }
 }
 
 @media screen and (min-width: 1170px) {
   .video-containter {
+    grid-template-columns: 33% 33% 33%;
     left: 240px;
-    background-color: antiquewhite;
-    width: 100vw;
+
+    width: calc(95vw - 240px);
+    margin-left: 15px;
   }
   .move-containter {
     left: 70px;
-    background-color: red;
+
     z-index: 50;
+    width: calc(95vw - 70px);
   }
   .movetoback {
     z-index: 40;
